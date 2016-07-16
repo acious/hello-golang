@@ -5,8 +5,8 @@ import (
 )
 
 type fakeResult struct {
-	body	string
-	urls	[]string
+	body string
+	urls []string
 }
 
 type fakeFetcher map[string]*fakeResult
@@ -63,6 +63,6 @@ func Crawl(url string, depth int, fetcher Fetcher) {
 	return
 }
 
-func main(){
-    Crawl("http://golang.org/", 4, fetcher)
+func main() {
+	Crawl("http://golang.org/", 4, fetcher)
 }
