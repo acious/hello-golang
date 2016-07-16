@@ -44,6 +44,19 @@ var fetcher = &fakeFetcher{
 	},
 }
 
+type Fetcher interface {
+	// Fetch returns the body of URL and
+	// a slice of URLs found on that page.
+	Fetch(url string) (body string, urls []string, err error)
+}
+
+func (f *fakeFetcher) Fetch(url string) (string, []string, error) {
+	if res, ok := (*f)[url]; ok {
+		return res.body, res.urls, nil
+	}
+	return "", nil, fmt.Errorf("not found: %s", url)
+}
+
 func Crawl(url string, depth int, fetcher Fetcher) {
 	// TODO: Fetch URLs in parallel.
 	// TODO: Don't fetch the same URL twice.
