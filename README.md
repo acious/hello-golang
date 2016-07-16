@@ -5,9 +5,9 @@
 
 ### Getting Started
 
-master브랜치를 체크아웃하시거나, 본인의 진행상황에 맞는 step 브랜치를 체크아웃하세요. 
-ex) `git checkout master` 
-ex) `git checkout step-1` 
+master 브랜치를 체크아웃하시거나, 본인의 진행상황에 맞는 step 브랜치를 체크아웃하세요.  
+ex) `git checkout master`  
+ex) `git checkout step-1`  
 본 실습에 대한 안내와 설명은 [Hello Golang!](https://docs.google.com/document/d/1ZAhEQN2Ypc_azBV4IJ-Ivk4pthGhcHMmNAVZnrZF_-o/edit)을 참고하세요. 
 
 ### License
